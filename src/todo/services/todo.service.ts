@@ -38,6 +38,7 @@ export class TodoService {
   }
 
   async remove(id: number): Promise<void> {
-    this.todoRepository.delete(id);
+    const todo = await this.findOne(id);
+    this.todoRepository.delete(todo.id);
   }
 }
