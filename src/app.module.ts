@@ -13,7 +13,7 @@ import { AppService } from './app.service';
       port: 3306,
       username: 'root',
       password: 'root',
-      database: 'test',
+      database: 'apidb',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true,
     }),
