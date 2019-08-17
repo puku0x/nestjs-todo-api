@@ -23,6 +23,20 @@ $ docker-compose up
 $ docker-compose down
 ```
 
+## Sample requests
+
+```bash
+$ curl -X POST http://localhost:3000/api/v1/todos \
+  -H "Content-Type: application/json" \
+  -d '{"text":"todo"}'
+$ curl -X GET http://localhost:3000/api/v1/todos
+$ curl -X GET http://localhost:3000/api/v1/todos/1
+$ curl -X PUT http://localhost:3000/api/v1/todos/1 \
+  -H "Content-Type: application/json" \
+  -d '{"text":"done", "checked":true}'
+$ curl -X DELETE http://localhost:3000/api/v1/todos/1
+```
+
 ## Test
 
 ```bash
