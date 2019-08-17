@@ -6,15 +6,15 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 
-@Entity()
+@Entity({ name: 'todo' })
 export class TodoEntity {
   @PrimaryGeneratedColumn()
   readonly id?: number;
 
-  @Column('text')
+  @Column({ length: 255 })
   text: string;
 
-  @Column('boolean')
+  @Column({ type: 'boolean' })
   checked = false;
 
   @CreateDateColumn({ type: 'timestamp' })
