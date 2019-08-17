@@ -41,7 +41,14 @@ $ curl -X DELETE http://localhost:3000/api/v1/todos/1
 
 ```bash
 # unit tests
-$ npm run test
+$ docker-compose run app npm test
+```
+
+## Build
+
+```bash
+# unit tests
+$ docker-compose run app npm run build
 ```
 
 ## License
