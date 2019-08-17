@@ -1,11 +1,12 @@
 import {
   Controller,
+  Body,
+  Param,
+  HttpCode,
   Post,
   Get,
   Put,
   Delete,
-  Body,
-  Param,
 } from '@nestjs/common';
 
 import { CreateTodoDto, UpdateTodoDto } from '../dtos';
@@ -16,6 +17,7 @@ export class TodoController {
   constructor(private readonly todoService: TodoService) {}
 
   @Post()
+  @HttpCode(201)
   create(@Body() todoDto: CreateTodoDto) {
     return this.todoService.create(todoDto);
   }
@@ -36,6 +38,7 @@ export class TodoController {
   }
 
   @Delete(':id')
+  @HttpCode(204)
   remove(@Param('id') id: number) {
     return this.todoService.remove(id);
   }
