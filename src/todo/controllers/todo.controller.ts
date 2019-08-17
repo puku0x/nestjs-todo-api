@@ -8,10 +8,10 @@ import {
   Param,
 } from '@nestjs/common';
 
-import { CreateTodoDto, UpdateTodoDto } from './todo.dto';
-import { TodoService } from './todo.service';
+import { CreateTodoDto, UpdateTodoDto } from '../dtos';
+import { TodoService } from '../services';
 
-@Controller('todos')
+@Controller('v1/todos')
 export class TodoController {
   constructor(private readonly todoService: TodoService) {}
 

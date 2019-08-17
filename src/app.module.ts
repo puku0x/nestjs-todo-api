@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
-import { TodoModule } from './todo/todo.module';
+import { TodoModule } from './todo';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
