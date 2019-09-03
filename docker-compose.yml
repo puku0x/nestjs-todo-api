@@ -1,7 +1,7 @@
 version: '3'
 services:
   app:
-    image: nestjs/cli:6.6.0
+    image: nestjs/cli
     ports:
       - 3000:3000
     volumes:
