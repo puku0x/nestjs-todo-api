@@ -1,0 +1,20 @@
+scalar Date
+
+type Todo {
+  id: Int!
+  text: String
+  checked: Boolean
+  createdAt: Date
+  updatedAt: Date
+}
+
+type Query {
+  todos: [Todo]!
+  todo(id: Int!): Todo
+}
+
+type Mutation {
+  createTodo(text: String!): Todo!
+  updateTodo(id: Int!, text: String!, checked: Boolean!): Todo!
+  removeTodo(id: Int!): Boolean
+}
