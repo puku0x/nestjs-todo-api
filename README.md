@@ -37,6 +37,52 @@ $ curl -X PUT http://localhost:3000/api/v1/todos/1 \
 $ curl -X DELETE http://localhost:3000/api/v1/todos/1
 ```
 
+```
+query {
+  todo(id: 1) {
+    id
+    text
+    checked
+    createdAt
+    updatedAt
+  }
+}
+
+query {
+  todos {
+    id
+    text
+    checked
+    createdAt
+    updatedAt
+  }
+}
+
+mutation {
+  createTodo(text: "todo") {
+    id
+    text
+    checked
+    createdAt
+    updatedAt
+  }
+}
+
+mutation {
+  updateTodo(id: 1, text: "done", checked: false) {
+    id
+    text
+    checked
+    createdAt
+    updatedAt
+  }
+}
+
+mutation {
+  removeTodo(id: 1)
+}
+```
+
 ## Test
 
 ```bash
